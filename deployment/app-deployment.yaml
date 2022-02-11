@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: master
-          image: local/app
+          image: oaviles/app
           imagePullPolicy: Never
           args:
             - app
