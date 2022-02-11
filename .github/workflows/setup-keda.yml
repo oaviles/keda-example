@@ -21,5 +21,9 @@ jobs:
           az acr helm install-cli --yes
           az aks install-cli
           az aks get-credentials --name ${{ secrets.CLUSTER_NAME }} --resource-group ${{ secrets.AZURE_RG }}
+          kubectl create namespace keda
+          helm repo add kedacore https://kedacore.github.io/charts
+          helm repo update
+          helm install keda kedacore/keda --namespace keda
           
           
