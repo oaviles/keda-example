@@ -36,11 +36,11 @@ this should result again in creation of `ScaleObject` and an HPA:
 ```sh
 # kubectl get scaledobjects
 NAME                 DEPLOYMENT   TRIGGERS   AGE
-mysql-scaledobject   dummy        redis      5s
+mysql-scaledobject   dummy        mysql      5s
 
 # kubectl get hpa
 NAME             REFERENCE          TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
-keda-hpa-dummy   Deployment/dummy   <unknown>/10 (avg)   1         4         0          45s
+keda-hpa-dummy   Deployment/dummy   <unknown>/5 (avg)   1         4         0          45s
 ```
 
 To scale up we have to insert some values to MySQL database. 
