@@ -19,7 +19,7 @@ spec:
       containers:
         - name: dummy
           image: oaviles/dummy
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           lifecycle:
             preStop:
               exec:
