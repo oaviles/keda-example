@@ -1,0 +1,27 @@
+on: workflow_dispatch
+name: Setup KEDA
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  azcli-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Azure CLI script to install KEDA
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.16.0
+        inlineScript: |
+          az login --service-principal -u ${{ secrets.CLIENTID }} -p ${{ secrets.CLIENTSECRET }} --tenant ${{ secrets.TENANTID }}
+          az acr helm install-cli --client-version 3.6.1 --yes
+          az aks install-cli --yes
+          helm repo add kedacore https://kedacore.github.io/charts
+          helm repo update
+          kubectl create namespace keda
+          helm install keda kedacore/keda --namespace keda
+          
