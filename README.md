@@ -7,7 +7,7 @@ samples check https://github.com/kedacore/samples
 The included `helper` provides an easy way to perform both 0 -> n and n -> 0 scalings.  
 
 ## Create cluster
-- You can refer this repro to create ypu AKS Cluster: [DevSquad Cloud-Native Project](https://github.com/oaviles/hello_cloud-native)
+- You can refer this repo to create your AKS Cluster: [DevSquad Cloud-Native Project](https://github.com/oaviles/hello_cloud-native)
 - Run GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
 
 ## Install KEDA
