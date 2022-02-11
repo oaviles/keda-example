@@ -15,11 +15,10 @@ jobs:
 
     - uses: Azure/k8s-deploy@v1.4
       with:
-        namespace: 'keda-demo'
+        namespace: 'default'
         manifests: |
           deployment/mysql-deployment.yaml
           deployment/redis-deployment.yaml
-          deployment/make-user.yaml
           deployment/dummy-deployment.yaml
           deployment/app-deployment.yaml
           deployment/api-deployment.yaml
