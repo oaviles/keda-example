@@ -22,3 +22,4 @@ jobs:
           deployment/dummy-deployment.yaml
           deployment/app-deployment.yaml
           deployment/api-deployment.yaml
+          keda/mysql-hpa.yaml
