@@ -1,27 +1,31 @@
-# KEDA example
+# DevSquad KEDA Project
 
 This repository consists of everything you need to setup simple Kubernetes 
-cluster and demonstrate usage of KEDA redis and mysql scalers. For more
+cluster and demonstrate usage of KEDA mysql scalers. For more
 samples check https://github.com/kedacore/samples
 
 The included `helper` provides an easy way to perform both 0 -> n and n -> 0 scalings.  
 
 ## Create cluster
-The deployment consists of 4 components:
+- You can refer this repro to create ypu AKS Cluster: [DevSquad Cloud-Native Project](https://github.com/oaviles/hello_cloud-native)
+- Run GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
+
+## Install KEDA
+- In this repo, run GitHub Action called ["Setup Keda"](https://github.com/oaviles/keda-example/actions/workflows/setup-keda.yml)
+- Optional: Manual deployement: Follow the official KEDA guide https://keda.sh/deploy/
+
+
+## Deploy KEDA Demo
+The deployment consists of 4 components: In this repo, run GitHub Action called ["Deploy Keda Demo"](https://github.com/oaviles/keda-example/actions/workflows/deploy-demo.yml)
 - MySQL instance
 - Dummy pod that will be scaled up and down
 - App service that provides some helper methods
-```sh
-kubectl apply -f deployment/
-```
 
-## Install KEDA
-Follow the official KEDA guide https://keda.sh/deploy/
 
 
 ## Observe
 To observe how everything works you can watch two things:
-- number of pods and their state: `watch -n2 "kubectl get pods"`
+- Number of pods and their state: `watch -n2 "kubectl get pods"`
 - HPA stats: `watch -n2 "kubectl get hpa"`
 
 
