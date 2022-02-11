@@ -17,9 +17,9 @@ jobs:
       with:
         namespace: 'keda-demo'
         manifests: |
-          yaml_files/mysql-deployment.yaml
-          yaml_files/redis-deployment.yaml
-          yaml_files/make-user.yaml
-          yaml_files/dummy-deployment.yaml
-          yaml_files/app-deployment.yaml
-          yaml_files/api-deployment.yaml
+          deployment/mysql-deployment.yaml
+          deployment/redis-deployment.yaml
+          deployment/make-user.yaml
+          deployment/dummy-deployment.yaml
+          deployment/app-deployment.yaml
+          deployment/api-deployment.yaml
