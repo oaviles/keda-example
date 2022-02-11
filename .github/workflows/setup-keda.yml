@@ -19,7 +19,7 @@ jobs:
         inlineScript: |
           az login --service-principal -u ${{ secrets.CLIENTID }} -p ${{ secrets.CLIENTSECRET }} --tenant ${{ secrets.TENANTID }}
           az acr helm install-cli --yes
-          az aks install-cli --yes
+          az aks install-cli
           az aks get-credentials --name ${{ secrets.CLUSTER_NAME }} --resource-group ${{ secrets.AZURE_RG }}
           
           
