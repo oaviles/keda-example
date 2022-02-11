@@ -19,9 +19,4 @@ jobs:
         inlineScript: |
           az login --service-principal -u ${{ secrets.CLIENTID }} -p ${{ secrets.CLIENTSECRET }} --tenant ${{ secrets.TENANTID }}
           az acr helm install-cli --client-version 3.6.1 --yes
-          az aks install-cli --yes
-          helm repo add kedacore https://kedacore.github.io/charts
-          helm repo update
-          kubectl create namespace keda
-          helm install keda kedacore/keda --namespace keda
           
