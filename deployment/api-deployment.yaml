@@ -34,7 +34,7 @@ spec:
       containers:
         - name: master
           image: oaviles/app
-          imagePullPolicy: Never
+          imagePullPolicy: Always
           args:
             - api
           ports:
