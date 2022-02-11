@@ -18,5 +18,5 @@ jobs:
         azcliversion: 2.16.0
         inlineScript: |
           az login --service-principal -u ${{ secrets.CLIENTID }} -p ${{ secrets.CLIENTSECRET }} --tenant ${{ secrets.TENANTID }}
-          az acr helm install-cli --client-version 3.6.1 --yes
+          az acr helm install-cli --yes
           
