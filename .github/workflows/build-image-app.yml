@@ -17,4 +17,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: {Your Docker Account}/api:${{ github.sha }}
+          tags: Your-Docker-Account/api:${{ github.sha }}
