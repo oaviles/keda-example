@@ -6,13 +6,17 @@ samples check https://github.com/kedacore/samples
 
 The included `helper` provides an easy way to perform both 0 -> n and n -> 0 scalings.  
 
+## Setup up your repo
+- Import or fork this repo in your GitHub Account. [How to import a repo](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/importing-a-repository-with-github-importer)
+- Create the necesary secrets in your repo. [How to create secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) and [Set up Secrets in GitHub Action workflows](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)
+
 ## Create cluster
 - You can refer this repo to create your AKS Cluster: [DevSquad Cloud-Native Project](https://github.com/oaviles/hello_cloud-native)
 - Run GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
 
 ## Install KEDA
 - In this repo, run GitHub Action called ["Setup Keda"](https://github.com/oaviles/keda-example/actions/workflows/setup-keda.yml)
-- Optional: Manual deployement: Follow the official KEDA guide https://keda.sh/deploy/
+- Optional: Manual deployment: Follow the official KEDA guide https://keda.sh/deploy/ (Note: This step is required if you do not execute the previous step)
 
 
 ## Deploy KEDA Demo
