@@ -1,4 +1,4 @@
-name: Push image to Docker Hub
+name: Build and Push image to Docker Hub
 
 # Controls when the workflow will run
 on: workflow_dispatch
@@ -17,4 +17,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: Your-Docker-Account/api:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/api:${{ github.sha }}
