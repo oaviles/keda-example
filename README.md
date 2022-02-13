@@ -10,7 +10,7 @@ The included `helper` provides an easy way to perform both 0 -> n and n -> 0 sca
 - Import or fork this repo in your GitHub Account. [How to import a repo](https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/importing-a-repository-with-github-importer)
 - Create the necesary secrets in your repo. [How to create secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) and [Set up Secrets in GitHub Action workflows](https://github.com/Azure/actions-workflow-samples/blob/master/assets/create-secrets-for-GitHub-workflows.md)
 
-## Create cluster
+## Create AKS Cluster
 - You can refer this repo to create your AKS Cluster: [DevSquad Cloud-Native Project](https://github.com/oaviles/hello_cloud-native)
 - Run GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
 
@@ -24,6 +24,7 @@ The deployment consists of 4 components: In this repo, run GitHub Action called 
 - MySQL instance
 - Dummy pod that will be scaled up and down
 - App service that provides some helper methods
+- Optional: Update and run GitHub Action called ["Build and Push image to Docker Hub"](https://github.com/oaviles/keda-example/blob/master/.github/workflows/build-image-app.yml) to push images in your own Docker Account or Private Docker Registry like Azure Container Registry.
 
 
 
