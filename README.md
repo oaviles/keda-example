@@ -61,3 +61,6 @@ and to scale down:
 ```shell script
 kubectl exec $(kubectl get pods | grep "server" | cut -f 1 -d " ") -- keda-talk mysql delete
 ```
+
+## Azure Service Bus Sample
+Reference guide: [.NET Core worker processing Azure Service Bus Queue scaled by KEDA](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/blob/main/connection-string-scenario.md) , in this repo you can reuse YAML files on ["sevicebus"](https://github.com/oaviles/keda-example/tree/master/servicebus) folder.
