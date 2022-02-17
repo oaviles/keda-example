@@ -20,5 +20,5 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./IaC/deploy-servicebus.bicep
-        parameters: ./IaC/parameters.json
+        parameters: ./IaC/parameters-servicebus.json
         failOnStdErr: false
