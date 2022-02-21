@@ -63,4 +63,11 @@ kubectl exec $(kubectl get pods | grep "server" | cut -f 1 -d " ") -- keda-talk 
 ```
 
 ## Azure Service Bus Sample
-Reference guide: [.NET Core worker processing Azure Service Bus Queue scaled by KEDA](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/blob/main/connection-string-scenario.md) , in this repo you can reuse YAML files on ["sevicebus"](https://github.com/oaviles/keda-example/tree/master/servicebus) folder.
+Reference guide: [.NET Core worker processing Azure Service Bus Queue scaled by KEDA](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/blob/main/connection-string-scenario.md), or in this repo you can reuse YAML files on ["sevicebus"](https://github.com/oaviles/keda-example/tree/master/servicebus) folder.
+
+- Deploy Azure Service Bus using GitHub Action called ["Depoy Azure Service Bus (Bicep)"](https://github.com/oaviles/keda-example/actions/workflows/deploy-servicebus-bicep.yml)
+- Get Connestion String from Azure Service Bus Queue "Orders"
+- Encode Connection String with this command "echo -n < your connection string here > | base64"
+- Update YAML files ["deploy-app.yaml"](https://github.com/oaviles/keda-example/blob/master/servicebus/deploy-app.yaml) and ["deploy-autoscaling.yaml"](https://github.com/oaviles/keda-example/blob/master/servicebus/deploy-autoscaling.yaml) with the encoded connection string in the text < base64-encoded-connection-string >
+- Update YAML files ["deploy-app.yaml"](https://github.com/oaviles/keda-example/blob/master/servicebus/deploy-app.yaml) and ["deploy-autoscaling.yaml"](https://github.com/oaviles/keda-example/blob/master/servicebus/deploy-autoscaling.yaml) with the queue name "orders" in the text < your-queue >
+- Sent messages to the queue called "orders", you can reuse the client application in this repo ["OrderGenerator"](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/tree/main/src/Keda.Samples.Dotnet.OrderGenerator)
