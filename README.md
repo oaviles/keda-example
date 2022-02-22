@@ -70,6 +70,9 @@ Reference guide: [.NET Core worker processing Azure Service Bus Queue scaled by 
   + Setup Secrets defined in GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
   + Run GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
 - Setup Secrets defined in GitHub Action called ["Depoy Azure Service Bus (Bicep)"](https://github.com/oaviles/keda-example/actions/workflows/deploy-servicebus-bicep.yml)
+- Install KEDA:
+  + In this repo, run GitHub Action called ["Setup Keda"](https://github.com/oaviles/keda-example/actions/workflows/setup-keda.yml)
+  + Optional: Manual deployment: Follow the official KEDA guide https://keda.sh/deploy/ (Note: This step is required if you do not execute the previous step)
 - Deploy Azure Service Bus using GitHub Action called ["Depoy Azure Service Bus (Bicep)"](https://github.com/oaviles/keda-example/actions/workflows/deploy-servicebus-bicep.yml)
 - Get Connestion String from Azure Service Bus Queue "Orders"
 - Encode Connection String with this command "echo -n < your connection string here > | base64"
