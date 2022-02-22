@@ -65,6 +65,11 @@ kubectl exec $(kubectl get pods | grep "server" | cut -f 1 -d " ") -- keda-talk 
 ## Azure Service Bus Sample
 Reference guide: [.NET Core worker processing Azure Service Bus Queue scaled by KEDA](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/blob/main/connection-string-scenario.md), or in this repo you can reuse YAML files on ["sevicebus"](https://github.com/oaviles/keda-example/tree/master/servicebus) folder.
 
+- Create AKS Cluster:
+  + You can refer this repo to create your AKS Cluster: [DevSquad Cloud-Native Project](https://github.com/oaviles/hello_cloud-native)
+  + Setup Secrets defined in GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
+  + Run GitHub Action called ["Deploy AKS"](https://github.com/oaviles/hello_cloud-native/actions/workflows/deploy-aks.yml)
+- Setup Secrets defined in GitHub Action called ["Depoy Azure Service Bus (Bicep)"](https://github.com/oaviles/keda-example/actions/workflows/deploy-servicebus-bicep.yml)
 - Deploy Azure Service Bus using GitHub Action called ["Depoy Azure Service Bus (Bicep)"](https://github.com/oaviles/keda-example/actions/workflows/deploy-servicebus-bicep.yml)
 - Get Connestion String from Azure Service Bus Queue "Orders"
 - Encode Connection String with this command "echo -n < your connection string here > | base64"
