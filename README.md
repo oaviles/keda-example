@@ -81,3 +81,5 @@ Reference guide: [.NET Core worker processing Azure Service Bus Queue scaled by 
 - Options to send messages to Azure Service Bus: 
   - Option 1: Console App to sent messages to the queue called "orders", you can reuse the client application in this repo ["OrderGenerator"](https://github.com/kedacore/sample-dotnet-worker-servicebus-queue/tree/main/src/Keda.Samples.Dotnet.OrderGenerator). To run the project, use the command ["dotnet run --project](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-run)", example ```dotnet run --project Keda.Samples.Dotnet.OrderGenerator.csproj```
   - Option 2: Serverless App (Azure Function App) to send message to the queue called "order", you can reuse the project from [here](https://github.com/oaviles/api_sendorders).
+  
+#### Microsoft Learn Reference: [Scale container applications in Azure Kubernetes Services using KEDA](https://docs.microsoft.com/en-us/learn/modules/aks-app-scale-keda/)
