@@ -1,5 +1,8 @@
 # DevSquad KEDA Project
 
+Reference Architecture: The diagram below shows how KEDA integrates with the Kubernetes HPA, external event sources, and Kubernetes’ API Server to provide autoscaling functionality.
+![](https://docs.microsoft.com/en-us/learn/modules/aks-app-scale-keda/media/2-1-keda-architecture.png)
+
 This repository consists of everything you need to setup simple Kubernetes 
 cluster and demonstrate usage of KEDA mysql scalers. For more
 samples check https://github.com/kedacore/samples
